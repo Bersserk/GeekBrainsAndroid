@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">GBApp</string>
+    <string name="textView">TextView</string>
+    <string name="editText">EditText</string>
+    <string name="button">Button</string>
+    <string name="switcher">switcher</string>
+    <string name="checkbox1">CheckBox1</string>
+    <string name="checkbox2">CheckBox2</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="name">input name</string>
+    <string name="password">input password</string>
+    <string name="email">input email</string>
+    <string name="phoneNumber">input phoneNumber</string>
 </resources>
