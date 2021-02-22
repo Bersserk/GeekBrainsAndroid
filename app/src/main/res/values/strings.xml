@@ -11,6 +11,8 @@
     <string name="password">input password</string>
     <string name="email">input email</string>
     <string name="phoneNumber">input phoneNumber</string>
+    <string name="hintEditText">Space for input text</string>
+    <string name="hintTextView">this will be result</string>
 
     <string name="button_0">0</string>
     <string name="button_1">1</string>
