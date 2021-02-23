@@ -4,8 +4,8 @@
     <style name="StyleLeftButton">\
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">48sp</item>
     </style>
@@ -13,8 +13,8 @@
     <style name="StyleRightButton">\
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">48sp</item>
     </style>
@@ -22,8 +22,8 @@
     <style name="StyleCenterButton">\
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">48sp</item>
     </style>
