@@ -41,6 +41,8 @@
         style="@style/frameLayoutStyle"
         android:layout_weight="7">
 
+
+
         <TableRow
             style="@style/tableRowStyle">
 
@@ -50,28 +52,6 @@
                 android:textSize="24sp"
                 android:text="@string/button_delete"
                 android:onClick="delete" />
-
-            <Button
-                android:id="@+id/button_leftPacket"
-                style="@style/StyleCenterButton"
-                android:text="@string/button_leftBracket"
-                android:onClick="operand" />
-
-            <Button
-                android:id="@+id/button_rightBracket"
-                style="@style/StyleCenterButton"
-                android:text="@string/button_rightBracket"
-                android:onClick="operand" />
-
-            <Button
-                android:id="@+id/button_divide"
-                style="@style/StyleRightButton"
-                android:text="@string/button_divide"
-                android:onClick="operand" />
-        </TableRow>
-
-        <TableRow
-            style="@style/tableRowStyle">
 
             <Button
                 android:id="@+id/button_7"
@@ -92,14 +72,22 @@
                 android:onClick="num" />
 
             <Button
-                android:id="@+id/button_multiply"
+                android:id="@+id/button_divide"
                 style="@style/StyleRightButton"
-                android:text="@string/button_multiply"
+                android:text="@string/button_divide"
                 android:onClick="operand" />
+
+
         </TableRow>
 
         <TableRow
             style="@style/tableRowStyle">
+
+            <Button
+                android:id="@+id/button_leftPacket"
+                style="@style/StyleCenterButton"
+                android:text="@string/button_leftBracket"
+                android:onClick="operand" />
 
             <Button
                 android:id="@+id/button_4"
@@ -130,6 +118,12 @@
             style="@style/tableRowStyle">
 
             <Button
+                android:id="@+id/button_rightBracket"
+                style="@style/StyleCenterButton"
+                android:text="@string/button_rightBracket"
+                android:onClick="operand" />
+
+            <Button
                 android:id="@+id/button_1"
                 style="@style/StyleLeftButton"
                 android:text="@string/button_1"
@@ -158,6 +152,13 @@
             style="@style/tableRowStyle"
             android:layout_marginBottom="4dp">
 
+
+            <Button
+                android:id="@+id/button_percent"
+                style="@style/StyleCenterButton"
+                android:text="@string/button_percent"
+                android:onClick="endCap" />
+
             <Button
                 android:id="@+id/button_0"
                 style="@style/StyleLeftButton"
@@ -171,16 +172,17 @@
                 android:onClick="endCap" />
 
             <Button
-                android:id="@+id/button_percent"
-                style="@style/StyleCenterButton"
-                android:text="@string/button_percent"
-                android:onClick="endCap" />
-
-            <Button
                 android:id="@+id/button_equals"
                 style="@style/StyleRightButton"
                 android:text="@string/button_equals"
                 android:onClick="result" />
+
+            <Button
+                android:id="@+id/button_multiply"
+                style="@style/StyleRightButton"
+                android:text="@string/button_multiply"
+                android:onClick="operand" />
+
         </TableRow>
 
     </TableLayout>
