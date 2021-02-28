@@ -30,7 +30,6 @@ public class Parser {
 
         List<Lexeme> lexemes = lexAnalyze(expressionText);
         this.lexemeBuffer = new LexemeBuffer(lexemes);
-//        System.out.println(expr(lexemeBuffer));
     }
 
     public int getText() {
@@ -56,7 +55,7 @@ public class Parser {
                 throw new RuntimeException("No arguments for function min");
             }
             int min = args.get(0);
-            for (Integer val: args) {
+            for (Integer val : args) {
                 if (val < min) {
                     min = val;
                 }
@@ -73,7 +72,7 @@ public class Parser {
             if (!args.isEmpty()) {
                 throw new RuntimeException("Wrong argument count for function rand");
             }
-            return (int)(Math.random() * 256f);
+            return (int) (Math.random() * 256f);
         });
         functionTable.put("avg", args -> {
             int sum = 0;
@@ -133,7 +132,7 @@ public class Parser {
     public List<Lexeme> lexAnalyze(String expText) {
         ArrayList<Lexeme> lexemes = new ArrayList<>();
         int pos = 0;
-        while (pos< expText.length()) {
+        while (pos < expText.length()) {
             char c = expText.charAt(pos);
             switch (c) {
                 case '(':

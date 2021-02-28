@@ -2,4 +2,7 @@
 <resources>
 
     <dimen name="textSizeButton">48sp</dimen>
+
+    <dimen name="textSizeButtonLand">36sp</dimen>
+
 </resources>

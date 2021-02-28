@@ -34,7 +34,8 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/hintTextView"
-            android:textSize="20sp" />
+            android:textSize="@dimen/textSizeButton"
+            android:gravity="end" />
     </FrameLayout>
 
     <TableLayout

@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public final static String MY_LOG = "myLog";
     StringBuilder resultText;
     String tmpText = "";
-    Boolean flag = false;
-
+    boolean flag = false;
+    boolean textOperand = false;
 
     TextView textInput, textOutput;
     Parser parser;
@@ -31,17 +31,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.calculator_activity);
         resultText = new StringBuilder("");
 
-
         Log.d(MY_LOG, new Object() {
         }.getClass().getEnclosingMethod().getName());
-
 
         textInput = findViewById(R.id.textInput);
         textOutput = findViewById(R.id.textOutput);
 
     }
 
-    public void result (View view) {
+    public void result(View view) {
 
         Log.d(MY_LOG, new Object() {
         }.getClass().getEnclosingMethod().getName());
@@ -65,13 +63,16 @@ public class MainActivity extends AppCompatActivity {
 
             textInput.setText(resultText);
             textOutput.setText(tmpText);
-        } else if (!tmpText.equals("") && !flag){
+            textOperand = false;
+
+        } else if (!tmpText.equals("") && !flag) {
             tmpText = tmpText.concat(button.getText().toString());
             resultText.append(button.getText());
 
             flag = true;
             textInput.setText(resultText);
             textOutput.setText(tmpText);
+            textOperand = false;
         }
     }
 
@@ -79,16 +80,16 @@ public class MainActivity extends AppCompatActivity {
         Log.d(MY_LOG, new Object() {
         }.getClass().getEnclosingMethod().getName());
 
-        //resultText.append(tmpText);
         tmpText = "";
         flag = false;
 
-        Button button = (Button) view;
-
-        resultText.append(" " + button.getText().toString() + " ");
-        textOutput.setText(button.getText());
-
-        textInput.setText(resultText);
+        if(!textOperand) {
+            Button button = (Button) view;
+            resultText.append(" " + button.getText().toString() + " ");
+            textOutput.setText(button.getText());
+            textInput.setText(resultText);
+            textOperand = true;
+        }
     }
 
     public void delete(View view) {
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         resultText.delete(0, resultText.length());
 
         textInput.setText(resultText);
+        textOperand = false;
     }
 
     public void endCap(View view) {
@@ -109,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "function is under development", Toast.LENGTH_LONG).show();
     }
-
 
 
 }

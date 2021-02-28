@@ -34,7 +34,8 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/hintTextView"
-            android:textSize="20sp" />
+            android:textSize="@dimen/textSizeButtonLand"
+            android:gravity="end" />
     </FrameLayout>
 
     <TableLayout
@@ -49,31 +50,35 @@
             <Button
                 android:id="@+id/button_delete"
                 style="@style/StyleLeftButton"
-                android:textSize="24sp"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_delete"
                 android:onClick="delete" />
 
             <Button
                 android:id="@+id/button_7"
-                style="@style/StyleLeftButton"
+                style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_7"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_8"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_8"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_9"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_9"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_divide"
                 style="@style/StyleRightButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_divide"
                 android:onClick="operand" />
 
@@ -85,31 +90,36 @@
 
             <Button
                 android:id="@+id/button_leftPacket"
-                style="@style/StyleCenterButton"
+                style="@style/StyleLeftButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_leftBracket"
                 android:onClick="operand" />
 
             <Button
                 android:id="@+id/button_4"
-                style="@style/StyleLeftButton"
+                style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_4"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_5"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_5"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_6"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_6"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_minus"
                 style="@style/StyleRightButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_minus"
                 android:onClick="operand" />
         </TableRow>
@@ -119,31 +129,36 @@
 
             <Button
                 android:id="@+id/button_rightBracket"
-                style="@style/StyleCenterButton"
+                style="@style/StyleLeftButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_rightBracket"
                 android:onClick="operand" />
 
             <Button
                 android:id="@+id/button_1"
-                style="@style/StyleLeftButton"
+                style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_1"
                 android:onClick="num"/>
 
             <Button
                 android:id="@+id/button_2"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_2"
                 android:onClick="num"/>
 
             <Button
                 android:id="@+id/button_3"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_3"
                 android:onClick="num" />
 
             <Button
                 android:id="@+id/button_plus"
                 style="@style/StyleRightButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_plus"
                 android:onClick="operand" />
         </TableRow>
@@ -155,31 +170,36 @@
 
             <Button
                 android:id="@+id/button_percent"
-                style="@style/StyleCenterButton"
+                style="@style/StyleLeftButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_percent"
                 android:onClick="endCap" />
 
             <Button
                 android:id="@+id/button_0"
-                style="@style/StyleLeftButton"
+                style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_0"
                 android:onClick="num"/>
 
             <Button
                 android:id="@+id/button_point"
                 style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_point"
                 android:onClick="endCap" />
 
             <Button
                 android:id="@+id/button_equals"
-                style="@style/StyleRightButton"
+                style="@style/StyleCenterButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_equals"
                 android:onClick="result" />
 
             <Button
                 android:id="@+id/button_multiply"
                 style="@style/StyleRightButton"
+                android:textSize="@dimen/textSizeButtonLand"
                 android:text="@string/button_multiply"
                 android:onClick="operand" />
 
