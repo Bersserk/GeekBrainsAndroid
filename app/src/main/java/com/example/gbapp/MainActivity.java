@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     String tmpText = "";
     int countBracket = 0;
     String in, inLine;
+    String str = "";
 
     TextView textInput, textOutput;
     Parser parser;
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         }.getClass().getEnclosingMethod().getName());
 
         if (countBracket == 0) {
-
             parser = new Parser(textInput.getText().toString());
             textOutput.setText(String.valueOf((parser.getText())));
         } else {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }.getClass().getEnclosingMethod().getName());
 
         Button button = (Button) view;
-        String str = button.getText().toString();
+        str = button.getText().toString();
         String strLine = "";
         if (resultText.length() != 0)
             strLine = String.valueOf(resultText.charAt(resultText.length() - 1));
@@ -103,8 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 tmp = "point";
             } else if (s.equals("(")) {
                 tmp = "leftBracket";
+                countBracket++;
             } else if (s.equals(")")) {
                 tmp = "rightBracket";
+                countBracket--;
             } else {
                 tmp = "zero";
             }
@@ -113,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     boolean arrayCondition(String in, String inLine) {
+
+        Log.d(MY_LOG, new Object() {
+        }.getClass().getEnclosingMethod().getName());
 
         int z = 0;  // zero
         int o = 1;  // operand
@@ -173,11 +178,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         boolean[][] arrayCondition = new boolean[6][6];
-        arrayCondition[o][z] = true;  // on condition that only minus
+        arrayCondition[o][z] = str.equals("-")?true:false;   // on condition that only minus
         arrayCondition[o][o] = true;  // on condition *1
         arrayCondition[o][n] = true;
         arrayCondition[o][p] = false;
-        arrayCondition[o][lb] = true;  // on condition that only minus
+        arrayCondition[o][lb] = str.equals("-")?true:false;   // on condition that only minus
         arrayCondition[o][rb] = true;
 
         arrayCondition[n][z] = true;
@@ -206,8 +211,24 @@ public class MainActivity extends AppCompatActivity {
         arrayCondition[rb][n] = true;
         arrayCondition[rb][p] = false;
         arrayCondition[rb][lb] = false;
-        arrayCondition[rb][rb] = true;  // on condition *2
+        arrayCondition[rb][rb] = confitionTwo()?true:false;  // on condition *2
 
         return arrayCondition[inOut][lineOut];
+    }
+
+    private boolean confitionTwo() {
+        char a = 0;
+        try {
+            a = resultText.charAt(0);
+            if(!(String.valueOf(a).equals("(")) && in.equals("rightBracket") && countBracket !=0){
+                resultText.insert(0, "(");
+                countBracket--;
+                return true;
+            } else
+                return false;
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
