@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     public final static String MY_LOG = "myLog";
+
     StringBuilder resultText;
     String tmpText = "";
     int countBracket = 0;
@@ -39,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
         }.getClass().getEnclosingMethod().getName());
 
         if (countBracket == 0) {
-            if (!(textOutput.getText().equals(")"))) {
-                resultText.deleteCharAt(resultText.length() - 2);
-                textInput.setText(resultText);
-            }
+
             parser = new Parser(textInput.getText().toString());
             textOutput.setText(String.valueOf((parser.getText())));
         } else {

@@ -1,10 +1,13 @@
 package com.example.gbapp;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Parser {
+    public final static String MY_LOG = "myLog";
     /*------------------------------------------------------------------
      * PARSER RULES
      *------------------------------------------------------------------*/
@@ -33,6 +36,9 @@ public class Parser {
     }
 
     public int getText() {
+        Log.d(MY_LOG, new Object() {
+        }.getClass().getEnclosingMethod().getName());
+
         return expr(lexemeBuffer);
     }
 
@@ -117,6 +123,8 @@ public class Parser {
         }
 
         public Lexeme next() {
+            Log.d(MY_LOG, new Object() {
+            }.getClass().getEnclosingMethod().getName());
             return lexemes.get(pos++);
         }
 
@@ -207,6 +215,10 @@ public class Parser {
     }
 
     public int expr(LexemeBuffer lexemes) {
+
+        Log.d(MY_LOG, new Object() {
+        }.getClass().getEnclosingMethod().getName());
+
         Lexeme lexeme = lexemes.next();
         if (lexeme.type == LexemeType.EOF) {
             return 0;
