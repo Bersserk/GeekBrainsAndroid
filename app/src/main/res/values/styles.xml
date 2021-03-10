@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="mainStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/textSizeButton</item>
+        <item name="backgroundColor">@color/black</item>
+    </style>
+
+
+    <style name="StyleLeftButton" parent="mainStyle">\
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <style name="StyleRightButton" parent="mainStyle">\
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="StyleCenterButton" parent="mainStyle">\
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+
+    <style name="tableRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="frameLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">#4C4848</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+
+
+
+
+</resources>

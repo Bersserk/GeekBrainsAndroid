@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">GBApp</string>
+    <string name="textView">TextView</string>
+    <string name="editText">EditText</string>
+    <string name="button">Button</string>
+    <string name="switcher">switcher</string>
+    <string name="checkbox1">CheckBox1</string>
+    <string name="checkbox2">CheckBox2</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="name">input name</string>
+    <string name="password">input password</string>
+    <string name="email">input email</string>
+    <string name="phoneNumber">input phoneNumber</string>
+    <string name="hintEditText">Space for input text</string>
+    <string name="hintTextView">this will be result</string>
+
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="button_point">.</string>
+    <string name="button_percent">%</string>
+    <string name="button_equals">=</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_multiply">*</string>
+    <string name="button_delete">del</string>
+    <string name="button_rightBracket">)</string>
+    <string name="button_leftBracket">(</string>
+    <string name="button_divide">/</string>
 </resources>
